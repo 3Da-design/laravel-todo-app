@@ -23,7 +23,7 @@ class TodoController extends Controller
     public function index(Request $request)
     {
         // DoneのTodoを表示するかどうか（GETパラメータで判定）
-        if ($request->has('done')) {
+        if ($request->boolean('done')) {
             // DoneのTodoを作成日順で表示する
             $todos = TodoItem::where(['user_id' => Auth::id(), 'is_done' => true])->orderBy('created_at', 'desc')->get();
         } else {

@@ -7,15 +7,8 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
-// FontAwesome
-$fs-font-path: '@fontawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/regular';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import '@fortawesome/fontawesome-free/scss/brands';
-
 .bg-green {
-  border-color: #658e7c;
+  background-color: #658e7c;
 }
 
 .btn-green {
