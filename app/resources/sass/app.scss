@@ -9,10 +9,10 @@
 
 // FontAwesome
 $fs-font-path: '@fontawesome/fontawesome-free/webfonts';
-@import '@fontawesome/fontawesome-free/scss/fontawesome';
-@import '@fontawesome/fontawesome-free/scss/regular';
-@import '@fontawesome/fontawesome-free/scss/solid';
-@import '@fontawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
 
 .bg-green {
   border-color: #658e7c;

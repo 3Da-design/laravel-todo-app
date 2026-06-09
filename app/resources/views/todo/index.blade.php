@@ -52,20 +52,26 @@
                   href="{{ route('todo.edit', $todo->id) }}"
                   class="btn btn-orange"
                 >
-                  <i class=fa-solid fa-pen pe-2"></i>編集する
+                  <i class="fa-solid fa-pen pe-2"></i>編集する
                 </a>
 
                 {{-- Done/Undone Button --}}
                 @if($todo->is_done === false)
-                  {{ Form::open(['url' => route('todo.done', $todo->id), 'method' => 'put']) }}
-                  {!! Form::button('<i class="fa-regular fa-circle-check pe-2"></i>完了！', ['class' => 'btn btn-blue', 'type' => 'submit']) !!}
+                  {!! html()->form('PUT', route('todo.done', $todo->id))->open() !!}
+                  {!! html()->button()
+                    ->html('<i class="fa-regular fa-circle-check pe-2"></i>完了！')
+                    ->type('submit')
+                    ->class('btn btn-blue') !!}
 
-                  {{ Form::close() }}
+                  {!! html()->form()->close() !!}
                 @else
-                  {{ Form::open(['url' => route('todo.undone', $todo->id), 'method' => 'put']) }}
-                  {!! Form::button('<i class="fa-solid fa-circle-xmark pe-2"></i>未完了に戻す！', ['class' => 'btn btn-blue', 'type' => 'submit']) !!}
+                  {!! html()->form('PUT', route('todo.undone', $todo->id))->open() !!}
+                  {!! html()->button()
+                      ->html('<i class="fa-solid fa-circle-xmark pe-2"></i>未完了に戻す！')
+                      ->type('submit')
+                      ->class('btn btn-blue') !!}
 
-                  {{ Form:close() }}
+                  {!! html()->form()->close() !!}
                 @endif
               </div>
             </div>
